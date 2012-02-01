@@ -4,7 +4,9 @@
 %
 % This work is licensed under the Creative Commons Attribution-ShareAlike 3.0 Unported License. To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ or send a letter to Creative Commons, 171 Second Street, Suite 300, San Francisco, California, 94105, USA.
 
-\documentclass[twoside,letterpaper,11pt]{article}
+\documentclass[twoside,a4paper,11pt]{article}
+\usepackage{fancyhdr}
+\usepackage{afterpage}
 
 %-----------------------------------------------------------
 %Margin setup
@@ -12,8 +14,8 @@
 \setlength{\voffset}{0.1in}
 \setlength{\paperwidth}{8.5in}
 \setlength{\paperheight}{11in}
-\setlength{\headheight}{0in}
-\setlength{\headsep}{0in}
+\setlength{\headheight}{0pt}
+\setlength{\headsep}{0pt}
 \setlength{\textheight}{11in}
 \setlength{\textheight}{10in}
 \setlength{\topmargin}{-0.7in}
@@ -25,7 +27,7 @@
 %\usepackage{fullpage}
 %\usepackage{shading}
 %\textheight=9.0in
-\pagestyle{fancy}
+%\pagestyle{fancy}
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
@@ -36,14 +38,14 @@
 
 %-----------------------------------------------------------
 %Custom commands
-\newcommand{\resitem}[1]{\item #1 \vspace{-2pt}}
+\newcommand{\resitem}[1]{\item #1 \vspace{-5pt}}
 % \newcommand{\resheading}[1]{{\large \parashade[.9]{sharpcorners}{\textbf{#1 \vphantom{p\^{E}}}}}}
 \newcommand{\resheading}[1]{
   \parbox{\textwidth}{
     \begin{shaded}
       \textbf{\sffamily{\mbox{~}{\large #1} \vphantom{p\^{E}}}}
     \end{shaded}
-  }
+  }\vspace{-6px}
 }
 \newcommand{\ressubheading}[4]{
 \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
@@ -53,7 +55,7 @@
 %-----------------------------------------------------------
 
 \begin{document}
-
+\afterpage{\vspace*{12pt}}
 \begin{tabular*}{7.5in}{l@{\extracolsep{\fill}}r}
 \textbf{\Large Zhe ZHOU (Conan)}  & 917-822-3585\\
 \#1682, 64TH ST, 2ND FL &  conanchou1412@gmail.com \\
@@ -61,13 +63,18 @@ Brooklyn, NY, 11204 & http://conanblog.me\\
 \end{tabular*}
 \\
 
-\vspace{0.1in}
+\vspace{0in}
 \resheading{Education}
+\begin{description}
+\item[Grade Point Average:]
+\textbf{3.9}
+\end{description}
+
 \begin{itemize}
 \item
 	\ressubheading{Polytechnic Institute of New York University}{New York}{M.Sc., Computer Science}{2011 - 2013}
 	\begin{itemize}
-		\resitem{Relevant courses: Operating System, Algorithm, Computer Architecture, Artificial Intelligence, Data Mining, Machine Learning, Interactive Computer Graphics, etc.}
+		\resitem{Relevant courses: Operating System, Algorithm, Computer Architecture, Artificial Intelligence, Machine Learning, Interactive Computer Graphics, etc.}
 	\end{itemize}
 
 \item
@@ -75,40 +82,17 @@ Brooklyn, NY, 11204 & http://conanblog.me\\
 	\begin{itemize}
 		\resitem{Relevant courses: Enterprise Web Solution, Database Management, Computer Networks, Information Security, Enterprise Information System, etc.}
 	\end{itemize}
-
-\end{itemize}
-
-\resheading{Work Experience}
-\begin{itemize}
-\item
-	\ressubheading{Chief Technology Officer}{Artlans, China}{in charge of Research and Development}{2010}
-
-\item
-	\ressubheading{Teaching Assistant of course Enterprise Web Solution}{SMU}{in charge of the lab session}{2009}
-
-\item
-	\ressubheading{Research Assistant on Cloud Security}{SMU}{in charge of the experiments implementation and data analysis}{2011}
-	\begin{itemize}
-		\resitem{Paper: On Trustworthiness of CPU Usage Metering and Accounting}
-	\end{itemize}
-
-\item
-	\ressubheading{System Developer (Intern)}{Standard Chartered Bank Regional HQ, Singapore}{in charge of the feature implementation}{2008}
-
-\item
-	\ressubheading{IT Administrator (Part-time)}{Success Human Resource Center Pte Ltd, Singapore}{IT support and business solution consultant}{2007}
-
-\item
-	\ressubheading{Free writer}{Hacker X Files magazine, China}{Topics mainly focused on network security and software security}{2003 - 2005}
 \end{itemize}
 
 \resheading{Skills}
 
 \begin{description}
-\item[Languages:]
-C/C++, Python, PHP, Objective-C, Java, .NET, ActionScript, Javascript, SQL, MATLAB, HTML, CSS ,\LaTeX, 
+\item[Familiar with :]
+C/C++, Python, PHP, Java, Objective-C, SQL
+\item[Basic Familiarity in:]
+VB, C\#, ActionScript, JavaScript, HTML, CSS, MATLAB, \LaTeX, Common LISP
 \item[Operating Systems:]
-Linux (Debian, OpenSUSE), MacOS X, Windows
+Linux (Debian, Ubuntu, OpenSUSE), Mac OS, Windows
 \item[Development Tools:]
 VIM, XCode, Eclipse, Adobe Flex, git, SVN, Adobe Photoshop, Adobe Fireworks
 \end{description}
@@ -116,7 +100,7 @@ VIM, XCode, Eclipse, Adobe Flex, git, SVN, Adobe Photoshop, Adobe Fireworks
 \resheading{Projects}
 \begin{itemize}
 \item
-	\ressubheading{Ponon!}{Artlans}{Co-developer and game designer}{2010}
+	\ressubheading{Ponon!}{Artlans}{Developer and game designer}{2010}
 	\begin{itemize}
 		\resitem{Description: Create a block falling game for iPhone / iPod Touch / iPad}
 		\resitem{Technology: Objective-C, iOS API}
@@ -130,9 +114,10 @@ VIM, XCode, Eclipse, Adobe Flex, git, SVN, Adobe Photoshop, Adobe Fireworks
 	\end{itemize}
 
 \item
+	\ressubheading{Xport}{Xtreme Coding 2008 Competition}{UI designer and developer}{2008}
 	\begin{itemize}
-		\resitem{Description: Develop a location based Android app to help smoker to abstain from smoking}
-		\resitem{Technology: Android, Java, Apache, MySQL, Twitter API}
+		\resitem{Description: Develop a Adobe AIR app for extreme sports devotees to share videos, communicate, and plan events online}
+		\resitem{Technology: Java, MySQL, Adobe AIR, Google Map API, Apache}
 	\end{itemize}
 
 \item
@@ -141,16 +126,18 @@ VIM, XCode, Eclipse, Adobe Flex, git, SVN, Adobe Photoshop, Adobe Fireworks
 		\resitem{Description: Build a internal knowledge sharing system for Standard Chartered Bank}
 		\resitem{Technology: Microsoft SharePoint, C\#, .Net AJAX framework, JavaScript, CSS, HTML}
 	\end{itemize}
-
 \item
-	\ressubheading{Xport}{Xtreme Coding 2008}{UI designer and developer}{2008}
+	\ressubheading{ByeSmoke}{Xtreme Coding 2007 Competition}{Lead developer}{2007}
 	\begin{itemize}
-		\resitem{Description: Develop a Adobe AIR app for extreme sports devotees to share videos, communicate, and plan events online}
-		\resitem{Technology: Java, MySQL, Adobe AIR, Google Map API, Apache}
+		\resitem{Description: Develop a location based Android app to help smoker to abstain from smoking}
+		\resitem{Technology: Android, Java, Apache, MySQL, Twitter API}
 	\end{itemize}
-
+\newpage
+\thispagestyle{fancy}{
+\fancyhead[C]{Zhe ZHOU :: 917-822-3585 :: conanchou1412@gmail.com :: \#1682, 64TH ST, 2ND FL, Brooklyn, NY, 11204}
+}
 \item
-	\ressubheading{ezVET}{Pets Lover Club}{Project leader and lead developer}{2007}
+	\ressubheading{ezVET}{Pets Lover Club}{Project leader}{2007}
 	\begin{itemize}
 		\resitem{Description: Build a platform providing a better solution for veterinarians to schedule and cooperate to serve their customers}
 		\resitem{Technology: Java, MySQL, HTML, CSS, JavaScript, Google Gear and Map APIs, Android, SMS Web Service, Apache}
@@ -160,11 +147,10 @@ VIM, XCode, Eclipse, Adobe Flex, git, SVN, Adobe Photoshop, Adobe Fireworks
 \resheading{Pet Projects}
 \begin{itemize}
 \item
-	\ressubheading{rt2x}{Twitter}{Open Source}{2010}
+	\ressubheading{Infophile}{iOS}{in progress, not released yet}{2012}
 	\begin{itemize}
-		\resitem{Description: A plugin for TweetNest to forward tweets to other SNS like renren, sina, fanfou, renjian, and zuosha.}
-		\resitem{Technology: PHP, MySQL}
-		\resitem{URL: https://github.com/ConanChou/tweetnest-with-rt2x}
+		\resitem{Description: A iOS App and service for better personalized information retrieval.}
+		\resitem{Technology: Objective-C, Python, Cassandra, Nginx}
 	\end{itemize}
 
 \item
@@ -176,16 +162,40 @@ VIM, XCode, Eclipse, Adobe Flex, git, SVN, Adobe Photoshop, Adobe Fireworks
 	\end{itemize}
 
 \item
-	\ressubheading{Infophile}{iOS}{in progress, not released yet}{2011}
+	\ressubheading{rt2x}{Twitter}{Open Source}{2010}
 	\begin{itemize}
-		\resitem{Description: A iOS App and service for better personalized information retrieval.}
-		\resitem{Technology: Objective-C, Python, Cassandra, Nginx}
+		\resitem{Description: A plugin for TweetNest to forward tweets to other SNS like renren, sina, fanfou, renjian, and zuosha.}
+		\resitem{Technology: PHP, MySQL}
+		\resitem{URL: https://github.com/ConanChou/tweetnest-with-rt2x}
 	\end{itemize}
+\end{itemize}
+\resheading{Work Experience}
+\begin{itemize}
+\item
+	\ressubheading{Research Assistant on Cloud Security}{SMU, Singapore}{in charge of the experiments implementation and data analysis}{2011}
+	\begin{itemize}
+		\resitem{Paper: On Trustworthiness of CPU Usage Metering and Accounting}
+	\end{itemize}
+
+\item
+	\ressubheading{Chief Technology Officer}{Artlans, China}{in charge of Research and Development}{2010}
+
+\item
+	\ressubheading{Teaching Assistant of course Enterprise Web Solution}{SMU, Singapore}{in charge of the lab session}{2009}
+
+\item
+	\ressubheading{System Developer (Intern)}{Standard Chartered Bank Regional HQ, Singapore}{in charge of the feature implementation}{2008}
+
+\item
+	\ressubheading{IT Administrator (Part-time)}{Success Human Resource Center Pte Ltd, Singapore}{IT support and business solution consultant}{2007}
+
+\item
+	\ressubheading{Free writer}{Hacker X Files magazine, China}{Topics mainly focused on network security and software security}{2003 - 2005}
 \end{itemize}
 
 \resheading{Awards}
 	\begin{tabular*}{7.4in}{l@{\extracolsep{\fill}}r}
-		CS Department Scholarship (\$5,000) & 2011\\
+		CS Department Scholarship (\$5,000) & 2011, 2012\\
 		Lee Kuan Yew Global Business Plan Competition the 4\textsuperscript{th} Place (S\$5,000) & 2008\\
 		China the 6\textsuperscript{th} Challenge Cup (RMB 100,000) & 2008\\
 \end{tabular*}
