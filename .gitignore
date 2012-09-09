@@ -2,3 +2,5 @@
 *.log
 *.synctex.gz
 *.tex~
+*.backup
+*.pdf
