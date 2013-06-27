@@ -4,3 +4,5 @@
 *.tex~
 *.backup
 *.pdf
+*.txt
+*.dvi
